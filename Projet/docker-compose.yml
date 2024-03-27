@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  scrapy:
+    build: .
+    volumes:
+      - .:/app
+    depends_on:
+      - mongo
+    command: ["scrapy", "crawl", "cegef"]
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "3306:3306"
