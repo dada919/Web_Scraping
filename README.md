@@ -18,3 +18,13 @@ Pour un client (fictif ou non) vous devez coder un (ou plusieurs) script python 
 - (Bonus) utiliser une base de donnée azure pour stocker vos résultats de scrapping 
 - (Bonus) deployer votre scrapper dans azure app service
 - (Bonus) monitoire vos requête dans azure et envoyer une photo d’un dashboard de votre app en activité
+
+## Lancement du projet
+
+Ouvrir un terminal et se rendre dans le répertoire Projet
+
+```cd .\Projet\```
+
+Puis lancer le docker qui va sraper les données sur le site cegef et les mettre dans une bdd sql
+
+```docker-compose up```
