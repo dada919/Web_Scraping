@@ -20,11 +20,16 @@ Pour un client (fictif ou non) vous devez coder un (ou plusieurs) script python 
 - (Bonus) monitoire vos requête dans azure et envoyer une photo d’un dashboard de votre app en activité
 
 ## Lancement du projet
-
 Ouvrir un terminal et se rendre dans le répertoire Projet
-
 ```cd .\Projet\```
-
 Puis lancer le docker qui va sraper les données sur le site cegef et les mettre dans une bdd sql
-
 ```docker-compose up```
+Le projet se lance dans une image python avec scrapy. Les noms et descriptions des formations sont scapé puis enregistrer dans une BDD SQL
+
+### Il est possible de lancer le projet en local et d'enregistrer les données dans un fichier .json
+```scrapy crawl cegef -O formation.json```
+
+## Pour afficher toute les formations scrapé
+Vous pouvez lancer le fichier **Projet.ipynb** qui va faire un SELECT * From Scraping du fichier scraping.db
+
+![image](https://github.com/dada919/Web_Scraping/assets/77857194/d6030c1f-2b4c-4801-8ca4-2d15a88c5d6f)
