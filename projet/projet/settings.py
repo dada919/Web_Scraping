@@ -91,3 +91,6 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.selectreactor.SelectReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+ITEM_PIPELINES = {
+    'projet.pipelines.SQLitePipeline': 300,
+}

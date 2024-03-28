@@ -1,9 +1,12 @@
-FROM python:3.10
+FROM python:3.10-slim
 
 RUN pip install Scrapy
+RUN apt-get update && apt-get install -y sqlite3
 
 WORKDIR /app
 
 COPY . .
+
+COPY scraping.db /app/scraping.db
 
 CMD scrapy runspider cegef.py
