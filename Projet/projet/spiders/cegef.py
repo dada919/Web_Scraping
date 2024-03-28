@@ -10,11 +10,9 @@ class Cegef(scrapy.Spider):
         yield from formations
 
         last_page_number = int(response.css('.pagination li:last-child a::text').get())
-        print(f"Nombre total de pages : {last_page_number}")
 
         for page_number in range(2, last_page_number + 1):
             next_page_url = f'{response.url}page/{page_number}/'
-            print(f"Page actuelle : {page_number}")
             yield scrapy.Request(next_page_url, callback=self.parse)
 
     def extract_formations(self, response):
