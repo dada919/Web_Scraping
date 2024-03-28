@@ -33,3 +33,7 @@ Le projet se lance dans une image python avec scrapy. Les noms et descriptions d
 Vous pouvez lancer le fichier **Projet.ipynb** qui va faire un SELECT * From Scraping du fichier scraping.db
 
 ![image](https://github.com/dada919/Web_Scraping/assets/77857194/d6030c1f-2b4c-4801-8ca4-2d15a88c5d6f)
+
+## Image Docker du projet
+
+```docker push dada919/webscraping:tagname```
